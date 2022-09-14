@@ -1,8 +1,12 @@
-#!/bin/env python
+#!/usr/bin/env python
 import sys
 
 sys.path.append("./src")
 
 from cli.cli import go
 
-sys.exit(go())
+# sys.exit(go())
+
+if __name__ == '__main__':
+    sys.exit(go())
+

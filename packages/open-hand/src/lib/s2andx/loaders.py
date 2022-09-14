@@ -2,6 +2,7 @@ from typing import NamedTuple, Set, Dict, Tuple
 
 import pickle
 import os
+import sys
 
 StringCountDict = Dict[str, int]
 NameCountDict = Dict[str, StringCountDict]
@@ -11,6 +12,9 @@ NameCountDict = Dict[str, StringCountDict]
 NameEquivalenceSet = Set[Tuple[str, str]]
 
 from lib.predef.log import logger
+
+pkg_path = os.path.dirname(os.path.abspath(__file__)) + "/../../../../s2and"
+sys.path.append(pkg_path)
 
 from s2and.consts import PROJECT_ROOT_PATH, NAME_COUNTS_PATH
 
